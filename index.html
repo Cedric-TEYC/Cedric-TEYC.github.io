@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cédric Blondel — DevSecOps / Cybersécurité</title>
+  <meta name="description" content="Portfolio de Cédric Blondel — DevSecOps Engineer / Consultant Cybersécurité. CI/CD, sécurité, pentest, GRC, projets et certifications." />
+  <meta property="og:title" content="Cédric Blondel — DevSecOps / Cybersécurité" />
+  <meta property="og:description" content="Portfolio de Cédric Blondel — Projets CI/CD, sécurité offensive/défensive, IaC, et certifications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cedric-teyc.github.io/" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <style>
+    /* === STYLES PRINCIPAUX === */
+    :root{
+      --bg:#0b1020;
+      --panel:#11162b;
+      --text:#e6eaff;
+      --muted:#9aa3c7;
+      --brand:#67e8f9;
+      --brand-2:#22d3ee;
+      --ring:rgba(103,232,249,.35);
+      --card-radius:18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --maxw:1080px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7f8fb;
+        --panel:#ffffff;
+        --text:#0b1020;
+        --muted:#5b6178;
+        --brand:#06b6d4;
+        --brand-2:#0891b2;
+        --ring:rgba(6,182,212,.25);
+        --shadow: 0 10px 25px rgba(2,6,23,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg, var(--bg), #0b1228 55%, var(--bg));color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;border-radius:12px}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px 80px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:12px;background: radial-gradient(70% 70% at 30% 30%, var(--brand), var(--brand-2));box-shadow:0 0 0 6px rgba(255,255,255,.04), 0 12px 30px var(--ring);}
+    .brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    nav a{padding:8px 12px;border-radius:10px;color:var(--muted)}
+    nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;margin:28px 0 36px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .panel{background:var(--panel);border-radius:var(--card-radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.06)}
+    .hero .panel{padding:26px}
+    .title{font-size:34px;line-height:1.15;margin:0 0 8px;font-weight:800;letter-spacing:.2px}
+    .subtitle{margin:0 0 18px;color:var(--muted)}
+    .bullets{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px}
+    .chip{padding:8px 12px;border:1px dashed rgba(255,255,255,.18);color:var(--muted);border-radius:999px}
+    .cta{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid transparent;transition:.2s ease;box-shadow:0 10px 20px rgba(0,0,0,.2);}
+    .btn-primary{background:linear-gradient(180deg,var(--brand),var(--brand-2));color:#061018}
+    .btn-primary:hover{transform:translateY(-1px);filter:saturate(1.1)}
+    .btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border-color:rgba(255,255,255,.08)}
+    .btn-ghost:hover{background:rgba(255,255,255,.08)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{padding:18px}
+    .card h3{margin:6px 0 6px;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+    .tag{display:inline-block;margin-top:10px;font-size:12px;color:#0b1020;background:var(--brand);padding:6px 10px;border-radius:999px;font-weight:700}
+    .footer{margin-top:34px;padding:18px;text-align:center;color:var(--muted)}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(255,255,255,.08);padding:2px 8px;border-radius:6px;border:1px solid rgba(255,255,255,.15)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Cédric Blondel</h1>
+      </div>
+      <nav>
+        <a href="#projets">Projets</a>
+        <a href="#certifs">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="panel">
+        <h2 class="title">DevSecOps Engineer / Consultant Cybersécurité</h2>
+        <p class="subtitle">
+          Certifié ASRC. <br />
+          « Certifié ASRC, je souhaite mettre mes compétences en action dans un poste spécialisé, relever de nouveaux défis et continuer à évoluer. Intéressé par le CI/CD en DevSecOps ou le consulting en cybersécurité; je souhaite également approfondir l’Infrastructure as Code en entreprise. »
+        </p>
+
+        <div class="bullets">
+          <span class="chip">CI/CD · GitHub Actions</span>
+          <span class="chip">Docker · Swarm/K8s</span>
+          <span class="chip">Blue/Red Team</span>
+          <span class="chip">Wazuh · Splunk</span>
+          <span class="chip">PostgreSQL · MariaDB</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="CV.pdf" target="_blank" rel="noopener">📄 Télécharger le CV (PDF)</a>
+          <a class="btn btn-ghost" href="http://www.linkedin.com/in/c-blondel-ethicalhacker101001" target="_blank" rel="noopener">💼 LinkedIn</a>
+          <a class="btn btn-ghost" href="https://github.com/Cedric-TEYC" target="_blank" rel="noopener">💻 GitHub</a>
+          <a class="btn btn-ghost" href="#contact">✉️ Me contacter</a>
+        </div>
+      </div>
+
+      <div class="panel" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1400&auto=format&fit=crop" alt="Illustration cybersécurité / réseau" />
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="panel" style="padding:22px;">
+      <h2 style="margin:6px 0 14px;">Projets mis en avant</h2>
+      <div class="grid">
+        <article class="card panel">
+          <h3>Pipeline CI/CD sécurisé</h3>
+          <p>GitHub Actions, tests (Pytest), linting (Flake8/Black), SAST (Bandit), build & scan images (Trivy), déploiement Swarm.</p>
+          <a class="tag" href="https://github.com/Cedric-TEYC/Little-Pigs_LogMeIn" target="_blank" rel="noopener">Voir le projet</a>
+        </article>
+
+        <article class="card panel">
+          <h3>Blue Team • SIEM & IDS</h3>
+          <p>Collecte et corrélation (Wazuh/Splunk), détection Suricata, règles, dashboarding, faux-positifs & playbooks.</p>
+          <a class="tag" href="#" target="_blank" rel="noopener">Rapport / Screens</a>
+        </article>
+
+        <article class="card panel">
+          <h3>Campagne de phishing interne</h3>
+          <p>Conception et exécution avec GoPhish, suivi des métriques, recommandations de sensibilisation.</p>
+          <a class="tag" href="#" target="_blank" rel="noopener">Détails</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CERTIFS -->
+    <section id="certifs" class="panel" style="padding:22px;margin-top:20px;">
+      <h2 style="margin:6px 0 14px;">Certifications & parcours</h2>
+      <div class="grid">
+        <article class="card panel">
+          <h3>ASRC (RNCP 39611)</h3>
+          <p>Administrateur Systèmes, Réseaux & Cybersécurité – 2024/2025.</p>
+          <a class="tag" href="#" target="_blank" rel="noopener">Voir l’attestation</a>
+        </article>
+
+        <article class="card panel">
+          <h3>TheForage</h3>
+          <p>Simulations professionnalisantes : TheForage (proposés par des entreprises).</p>
+          <a class="tag" href="#" target="_blank" rel="noopener">Certificats</a>
+        </article>
+
+        <article class="card panel">
+          <h3>Portfolio technique</h3>
+          <p>Projets web (HTML/CSS) & démos techniques (déploiements, PoC sécurité).</p>
+          <a class="tag" href="https://github.com/Cedric-TEYC" target="_blank" rel="noopener">Démos</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel" style="padding:22px;margin-top:20px;">
+      <h2 style="margin:6px 0 14px;">Contact</h2>
+      <p style="color:var(--muted);margin:0 0 10px;">
+        Disponible pour un poste <span class="kbd">DevSecOps</span> ou <span class="kbd">Consultant cybersécurité</span>.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:c.blondel-pro@outlook.com">✉️ c.blondel-pro@outlook.com</a>
+        <a class="btn btn-ghost" href="http://www.linkedin.com/in/c-blondel-ethicalhacker101001" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/Cedric-TEYC" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <p class="footer">© <span id="y"></span> Cédric Blondel — Portfolio. Fait avec GitHub Pages.</p>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
