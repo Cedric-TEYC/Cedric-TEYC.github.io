@@ -177,7 +177,7 @@
         Disponible pour un poste <span class="kbd">DevSecOps</span> ou <span class="kbd">Consultant cybersécurité</span>.
       </p>
       <div class="cta">
-        <a class="btn btn-primary" href="mailto:c.blondel-pro@outlook.com">✉️ c.blondel-pro@outlook.com</a>
+        <a class="btn btn-primary" href="#" onclick="copyEmail()">✉️ c.blondel-pro@outlook.com</a>
         <a class="btn btn-ghost" href="http://www.linkedin.com/in/c-blondel-ethicalhacker101001" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/Cedric-TEYC" target="_blank" rel="noopener">GitHub</a>
       </div>
@@ -188,6 +188,17 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+    <script>
+    function copyEmail() {
+      const email = "c.blondel-pro@outlook.com";
+      navigator.clipboard.writeText(email).then(() => {
+        alert("📋 L'adresse mail de Cédric a bien été copiée dans le presse-papiers !");
+      }).catch(err => {
+        console.error("Erreur lors de la copie :", err);
+      });
+    }
   </script>
 </body>
 </html>
