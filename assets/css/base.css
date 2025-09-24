@@ -1,0 +1,38 @@
+:root{
+  --bg:#0b1020; --panel:#11162b; --text:#e6eaff; --muted:#9aa3c7;
+  --brand:#67e8f9; --brand-2:#22d3ee; --ring:rgba(103,232,249,.35);
+  --card-radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35); --maxw:1080px;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f7f8fb; --panel:#ffffff; --text:#0b1020; --muted:#5b6178;
+    --brand:#06b6d4; --brand-2:#0891b2; --ring:rgba(6,182,212,.25);
+    --shadow:0 10px 25px rgba(2,6,23,.08);
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),#0b1228 55%,var(--bg));color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;border-radius:12px}
+
+/* Layout & blocs */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px 80px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:44px;height:44px;border-radius:12px;background:radial-gradient(70% 70% at 30% 30%,var(--brand),var(--brand-2));box-shadow:0 0 0 6px rgba(255,255,255,.04),0 12px 30px var(--ring)}
+.brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{padding:8px 12px;border-radius:10px;color:var(--muted)}
+nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;margin:28px 0 36px}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+
+.panel{background:var(--panel);border-radius:var(--card-radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.06)}
+.hero-panel{padding:26px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+.footer{margin-top:34px;padding:18px;text-align:center;color:var(--muted)}
+.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(255,255,255,.08);padding:2px 8px;border-radius:6px;border:1px solid rgba(255,255,255,.15)}
