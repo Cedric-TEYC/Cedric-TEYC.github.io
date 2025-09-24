@@ -1,0 +1,6 @@
+/* Utilitaires = remplace les styles inline (mêmes valeurs exactes) */
+.pad-22{padding:22px}
+.mt-20{margin-top:20px}
+.section-title{margin:6px 0 14px}
+.mb-10{margin-bottom:10px}
+.muted{color:var(--muted)}
