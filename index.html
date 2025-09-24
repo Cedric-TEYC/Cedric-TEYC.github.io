@@ -9,9 +9,18 @@
   <meta property="og:description" content="Portfolio de Cédric Blondel - Projets CI/CD, sécurité offensive/défensive, IaC, et certifications." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cedric-teyc.github.io/" />
+  <!-- Tu peux garder l’image Unsplash comme aperçu social -->
+  <meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1400&auto=format&fit=crop" />
   <meta name="theme-color" content="#0f172a" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon/favicon.svg">
+
+  <!-- CSS (même rendu qu’avant) -->
+  <link rel="preload" href="assets/css/base.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/base.css"></noscript>
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/utilities.css">
 </head>
 <body>
   <div class="wrap">
@@ -150,18 +159,6 @@
     <p class="footer">© <span id="y"></span> Cédric Blondel - Portfolio.</p>
   </div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    function copyEmail() {
-      const email = "c.blondel-pro@outlook.com";
-      navigator.clipboard.writeText(email).then(() => {
-        alert("📋 L'adresse mail de Cédric a bien été copiée dans le presse-papiers !");
-      }).catch(err => {
-        console.error("Erreur lors de la copie :", err);
-      });
-    }
-  </script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
