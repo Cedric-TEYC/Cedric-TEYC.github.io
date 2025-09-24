@@ -19,7 +19,7 @@ img{max-width:100%;height:auto;border-radius:12px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px 80px}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:44px;height:44px;border-radius:12px;background:radial-gradient(70% 70% at 30% 30%,var(--brand),var(--brand-2));box-shadow:0 0 0 6px rgba(255,255,255,.04),0 12px 30px var(--ring)}
+<img class="logo" src="assets/img/favicon/favicon.svg" alt="Logo Cédric Blondel" width="44" height="44">
 .brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
 nav{display:flex;gap:14px;flex-wrap:wrap}
 nav a{padding:8px 12px;border-radius:10px;color:var(--muted)}
