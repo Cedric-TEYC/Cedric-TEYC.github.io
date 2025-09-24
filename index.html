@@ -11,67 +11,7 @@
   <meta property="og:url" content="https://cedric-teyc.github.io/" />
   <meta name="theme-color" content="#0f172a" />
 
-  <style>
-    /* === STYLES PRINCIPAUX === */
-    :root{
-      --bg:#0b1020;
-      --panel:#11162b;
-      --text:#e6eaff;
-      --muted:#9aa3c7;
-      --brand:#67e8f9;
-      --brand-2:#22d3ee;
-      --ring:rgba(103,232,249,.35);
-      --card-radius:18px;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --maxw:1080px;
-    }
-    @media (prefers-color-scheme: light){
-      :root{
-        --bg:#f7f8fb;
-        --panel:#ffffff;
-        --text:#0b1020;
-        --muted:#5b6178;
-        --brand:#06b6d4;
-        --brand-2:#0891b2;
-        --ring:rgba(6,182,212,.25);
-        --shadow: 0 10px 25px rgba(2,6,23,.08);
-      }
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg, var(--bg), #0b1228 55%, var(--bg));color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;border-radius:12px}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px 80px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:44px;height:44px;border-radius:12px;background: radial-gradient(70% 70% at 30% 30%, var(--brand), var(--brand-2));box-shadow:0 0 0 6px rgba(255,255,255,.04), 0 12px 30px var(--ring);}
-    .brand h1{font-size:18px;margin:0;font-weight:700;letter-spacing:.2px}
-    nav{display:flex;gap:14px;flex-wrap:wrap}
-    nav a{padding:8px 12px;border-radius:10px;color:var(--muted)}
-    nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:center;margin:28px 0 36px}
-    @media (max-width:900px){.hero{grid-template-columns:1fr}}
-    .panel{background:var(--panel);border-radius:var(--card-radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.06)}
-    .hero .panel{padding:26px}
-    .title{font-size:34px;line-height:1.15;margin:0 0 8px;font-weight:800;letter-spacing:.2px}
-    .subtitle{margin:0 0 18px;color:var(--muted)}
-    .bullets{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px}
-    .chip{padding:8px 12px;border:1px dashed rgba(255,255,255,.18);color:var(--muted);border-radius:999px}
-    .cta{display:flex;flex-wrap:wrap;gap:12px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;font-weight:700;border:1px solid transparent;transition:.2s ease;box-shadow:0 10px 20px rgba(0,0,0,.2);}
-    .btn-primary{background:linear-gradient(180deg,var(--brand),var(--brand-2));color:#061018}
-    .btn-primary:hover{transform:translateY(-1px);filter:saturate(1.1)}
-    .btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border-color:rgba(255,255,255,.08)}
-    .btn-ghost:hover{background:rgba(255,255,255,.08)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}}
-    .card{padding:18px}
-    .card h3{margin:6px 0 6px;font-size:18px}
-    .card p{margin:0;color:var(--muted)}
-    .tag{display:inline-block;margin-top:10px;font-size:12px;color:#0b1020;background:var(--brand);padding:6px 10px;border-radius:999px;font-weight:700}
-    .footer{margin-top:34px;padding:18px;text-align:center;color:var(--muted)}
-    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(255,255,255,.08);padding:2px 8px;border-radius:6px;border:1px solid rgba(255,255,255,.15)}
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="wrap">
@@ -89,7 +29,7 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="panel">
+      <div class="panel hero-panel">
         <h2 class="title">DevSecOps Engineer / Consultant Cybersécurité</h2>
         <p class="subtitle">
           Certifié ASRC. <br />
@@ -118,8 +58,8 @@
     </section>
 
     <!-- PROJETS -->
-    <section id="projets" class="panel" style="padding:22px;">
-      <h2 style="margin:6px 0 14px;">Projets mis en avant</h2>
+    <section id="projets" class="panel pad-22">
+      <h2 class="section-title">Projets mis en avant</h2>
       <div class="grid">
         <article class="card panel">
           <h3>Pipeline CI/CD sécurisé</h3>
@@ -143,8 +83,8 @@
     </section>
 
     <!-- CERTIFS -->
-    <section id="certifs" class="panel" style="padding:22px;margin-top:20px;">
-      <h2 style="margin:6px 0 14px;">Certifications & parcours</h2>
+    <section id="certifs" class="panel pad-22 mt-20">
+      <h2 class="section-title">Certifications & parcours</h2>
       <div class="grid">
         <article class="card panel">
           <h3>Certification ASRC (RNCP 39611)</h3>
@@ -170,13 +110,13 @@
             <a class="tag" href="Downloads/Attestations_Cyber/Attestation_Réussite_Fullstack.pdf" target="_blank" rel="noopener">Fullstack</a>
           </div>
         </article>
+      </div>
     </section>
  
     <!-- À PROPOS -->
-    <section id="apropos" class="panel" style="padding:22px;margin-top:20px;">
-      <h2 style="margin:6px 0 14px;">À propos</h2>
+    <section id="apropos" class="panel pad-22 mt-20">
+      <h2 class="section-title">À propos</h2>
       <div class="grid">
-        
         <article class="card panel">
           <h3>👨‍👦 Papa avant tout !</h3>
           <p>Je suis papa d’un petit garçon, il est ma plus grande source de motivation.</p>
@@ -191,14 +131,13 @@
           <h3>💻 Passion Cybersécurité</h3>
           <p>J’adore construire des pipelines CI/CD solides et sécurisés. J’ai aussi un petit côté hacker : rechercher et exploiter des failles (pentest et évaluations physiques) - toujours en labo et dans le respect de l’éthique.</p>
         </article>
-
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="panel" style="padding:22px;margin-top:20px;">
-      <h2 style="margin:6px 0 14px;">Contact</h2>
-      <p style="color:var(--muted);margin:0 0 10px;">
+    <section id="contact" class="panel pad-22 mt-20">
+      <h2 class="section-title">Contact</h2>
+      <p class="muted mb-10">
         Disponible pour un poste <span class="kbd">DevSecOps</span> ou <span class="kbd">Consultant cybersécurité</span>.
       </p>
       <div class="cta">
@@ -214,8 +153,7 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-
-    <script>
+  <script>
     function copyEmail() {
       const email = "c.blondel-pro@outlook.com";
       navigator.clipboard.writeText(email).then(() => {
